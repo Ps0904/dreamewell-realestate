@@ -23,7 +23,8 @@ export const metadata: Metadata = {
   description:
     "Discover productive farm opportunities and connect with reliable poultry and protein supply across Tamil Nadu.",
   icons: {
-    icon: "/favicon.svg",
+    icon: [{ url: "/favicon.png", type: "image/png" }],
+    apple: "/logo.png",
   },
 };
 

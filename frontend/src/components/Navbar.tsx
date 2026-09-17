@@ -11,6 +11,8 @@ const links = [
   { href: "/inventory", label: "Inventory" },
 ];
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 export function Navbar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
@@ -20,24 +22,11 @@ export function Navbar() {
     <header className="sticky top-0 z-50 border-b border-border/80 bg-[#fffcf7]/92 backdrop-blur-md">
       <div className="container-premium flex h-16 items-center justify-between gap-4 md:h-[72px]">
         <Link href="/" className="flex items-center gap-2.5 shrink-0">
-          <span className="flex h-9 w-9 items-center justify-center rounded-full bg-forest text-white">
-            <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" aria-hidden>
-              <path
-                d="M4 16c2-5 5-8 8-8s6 3 8 8"
-                stroke="currentColor"
-                strokeWidth="1.6"
-                strokeLinecap="round"
-              />
-              <path
-                d="M6 14c1.5-2.5 3.2-4 6-4s4.5 1.5 6 4"
-                stroke="currentColor"
-                strokeWidth="1.4"
-                strokeLinecap="round"
-                opacity="0.7"
-              />
-              <circle cx="12" cy="8" r="1.2" fill="currentColor" />
-            </svg>
-          </span>
+          <img
+            src={`${basePath}/logo.png`}
+            alt="Dreamwell Ventures"
+            className="h-10 w-10 rounded-full object-cover ring-1 ring-border md:h-11 md:w-11"
+          />
           <span className="font-display text-[1.15rem] font-semibold tracking-tight text-forest md:text-xl">
             Dreamwell Ventures
           </span>

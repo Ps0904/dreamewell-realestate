@@ -1,11 +1,20 @@
 import Link from "next/link";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 export function Footer() {
   return (
     <footer className="bg-forest-deep text-white">
       <div className="container-premium flex flex-col gap-10 py-14 md:flex-row md:items-start md:justify-between">
         <div className="max-w-sm">
-          <p className="font-display text-2xl font-medium">Dreamwell Ventures</p>
+          <div className="flex items-center gap-3">
+            <img
+              src={`${basePath}/logo.png`}
+              alt="Dreamwell Ventures"
+              className="h-11 w-11 rounded-full object-cover ring-1 ring-white/20"
+            />
+            <p className="font-display text-2xl font-medium">Dreamwell Ventures</p>
+          </div>
           <p className="mt-3 text-sm leading-relaxed text-white/65">
             From productive land to reliable farm supply — holdings and protein from working farms
             across Tamil Nadu.
