@@ -27,6 +27,8 @@ Output is in `frontend/out/` (includes `index.html`).
 
 ## Deploy
 
-Push to `main` — GitHub Actions builds and publishes to GitHub Pages automatically.
+Push to `main`. GitHub Actions builds the site and publishes the static files to the **repository root** so GitHub Pages can serve them with:
 
-In the repo: **Settings → Pages → Source → GitHub Actions**
+**Settings → Pages → Source → Deploy from a branch → `main` / `/(root)`**
+
+Do not leave Pages pointed at a source that only has the README with no `index.html`.

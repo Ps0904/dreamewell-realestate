@@ -21,15 +21,12 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-border/80 bg-[#fffcf7]/92 backdrop-blur-md">
       <div className="container-premium flex h-16 items-center justify-between gap-4 md:h-[72px]">
-        <Link href="/" className="flex items-center gap-2.5 shrink-0">
+        <Link href="/" className="flex items-center shrink-0">
           <img
             src={`${basePath}/logo.png`}
-            alt="Dreamwell Ventures"
-            className="h-10 w-10 rounded-full object-cover ring-1 ring-border md:h-11 md:w-11"
+            alt="Dream Well Ventures Pvt Ltd"
+            className="h-12 w-auto object-contain md:h-14"
           />
-          <span className="font-display text-[1.15rem] font-semibold tracking-tight text-forest md:text-xl">
-            Dreamwell Ventures
-          </span>
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">

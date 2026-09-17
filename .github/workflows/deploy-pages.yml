@@ -6,20 +6,15 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 concurrency:
   group: pages
   cancel-in-progress: true
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: frontend
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -32,25 +27,38 @@ jobs:
           cache-dependency-path: frontend/package-lock.json
 
       - name: Install
+        working-directory: frontend
         run: npm ci
 
       - name: Build static site
+        working-directory: frontend
         run: npm run build
         env:
           GITHUB_PAGES: "true"
 
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: frontend/out
+      - name: Publish build to repository root
+        run: |
+          set -euo pipefail
+          rm -rf _next 404 inventory marketing images
+          rm -f 404.html index.html index.txt favicon.png favicon.svg logo.png
+          cp -R frontend/out/_next .
+          cp -R frontend/out/images .
+          cp -R frontend/out/inventory .
+          cp -R frontend/out/marketing .
+          cp frontend/out/index.html frontend/out/index.txt frontend/out/404.html .
+          cp frontend/out/favicon.png frontend/out/favicon.svg frontend/out/logo.png .
+          if [ -d frontend/out/404 ]; then cp -R frontend/out/404 .; fi
+          touch .nojekyll
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Commit and push published site
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A -- .nojekyll index.html index.txt 404.html favicon.png favicon.svg logo.png _next images inventory marketing 404
+          if git diff --cached --quiet; then
+            echo "No site changes to publish"
+            exit 0
+          fi
+          git commit -m "Publish static site for GitHub Pages [skip ci]"
+          git push
