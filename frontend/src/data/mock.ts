@@ -1,0 +1,545 @@
+export const images = {
+  hero: "/images/hero.jpg?v=4",
+  farmland: "/images/farmland.jpg?v=3",
+  poultry: "/images/type-poultry.jpg?v=3",
+  eggs: "/images/eggs.jpg?v=3",
+  meat: "/images/meat.jpg?v=3",
+  birds: "/images/birds.jpg?v=3",
+  featured: "/images/featured.jpg?v=3",
+  grove: "/images/grove.jpg?v=3",
+  landscape: "/images/riverside.jpg?v=3",
+  farmhouse: "/images/farmhouse.jpg?v=3",
+  fields: "/images/village-farm.jpg?v=3",
+  orchard: "/images/orchard.jpg?v=3",
+  morning: "/images/landscape.jpg?v=3",
+  chettinad: "/images/chettinad.jpg?v=3",
+  poultryShed: "/images/poultry-shed.jpg?v=3",
+  villageFarm: "/images/village-farm.jpg?v=3",
+  riverside: "/images/riverside.jpg?v=3",
+};
+
+export const tickerItems = [
+  "Clear titles across Tamil Nadu holdings",
+  "Tiled farm sheds with family-ready amenities",
+  "Land-backed assets for long-term value",
+  "Trust, growth, and natural yield",
+];
+
+export const heroHighlights = [
+  { value: "12.5 ac", label: "Typical holding size" },
+  { value: "Daily", label: "Farm-to-market supply" },
+  { value: "Pollachi", label: "Western Ghats belt" },
+];
+
+export const homeMetrics = [
+  { value: "24", label: "Farm Properties" },
+  { value: "18", label: "Active Farms" },
+  { value: "12,500+", label: "Eggs Available" },
+  { value: "4.8M", label: "Annual Supply" },
+];
+
+export const portfolioItems = [
+  {
+    id: "farm-properties",
+    title: "Farm Properties",
+    description: "Verified Tamil Nadu farm land with clear titles and tiled farm infrastructure.",
+    location: "Pollachi · Coimbatore · Erode",
+    status: "12 Available",
+    image: images.villageFarm,
+  },
+  {
+    id: "poultry-farms",
+    title: "Poultry Farms",
+    description: "Working poultry sheds across Namakkal and Pollachi with established yield cycles.",
+    location: "Pollachi & Namakkal",
+    status: "8 Active",
+    image: images.poultryShed,
+  },
+  {
+    id: "egg-production",
+    title: "Egg Production",
+    description: "Fresh farm eggs sourced daily from monitored production farms.",
+    location: "Coimbatore Belt",
+    status: "In Supply",
+    image: images.eggs,
+  },
+  {
+    id: "meat-supply",
+    title: "Meat Supply",
+    description: "Fresh poultry meat with transparent availability and farm traceability.",
+    location: "Erode & Tiruppur",
+    status: "Daily Dispatch",
+    image: images.meat,
+  },
+  {
+    id: "live-birds",
+    title: "Live Birds",
+    description: "Healthy live birds available for commercial and farm restocking needs.",
+    location: "Salem Corridor",
+    status: "850 Available",
+    image: images.birds,
+  },
+];
+
+export const proteinSupply = [
+  {
+    id: "eggs",
+    category: "EGGS",
+    title: "Fresh Farm Eggs",
+    quantity: "12,500 trays",
+    price: "₹6 / egg",
+    status: "Available",
+    image: images.eggs,
+  },
+  {
+    id: "poultry",
+    category: "POULTRY",
+    title: "Broiler Birds",
+    quantity: "4,200 birds",
+    price: "₹145 / bird",
+    status: "Available",
+    image: images.poultry,
+  },
+  {
+    id: "meat",
+    category: "MEAT",
+    title: "Fresh Poultry Meat",
+    quantity: "1,250 kg",
+    price: "₹280 / kg",
+    status: "Limited",
+    image: images.meat,
+  },
+];
+
+export const featuredFarm = {
+  title: "Featured Farm",
+  name: "Senthurai Farm Estate",
+  acreage: "12.5 Acres",
+  location: "Pollachi, Tamil Nadu",
+  type: "Poultry-Integrated Farmland",
+  availability: "Available",
+  price: "Contact for pricing",
+  description:
+    "Traditional tiled farm sheds, coconut grove, and working poultry yards on the Pollachi belt — productive land with South Indian farm infrastructure already in place.",
+  image: images.featured,
+};
+
+export const supplyActivity = [
+  { label: "Eggs", detail: "2,400 trays dispatched", when: "Today" },
+  { label: "Live Birds", detail: "850 birds available", when: "Today" },
+  { label: "Poultry Meat", detail: "1,250 kg available", when: "Today" },
+];
+
+export const trustPoints = [
+  {
+    title: "Verified Farm Properties",
+    description: "Every listing is reviewed for title clarity, location accuracy, and operational readiness.",
+  },
+  {
+    title: "Direct Farm Supply",
+    description: "Protein supply is sourced from active farms with transparent stock visibility.",
+  },
+  {
+    title: "Transparent Availability",
+    description: "Live quantities, farm origin, and status updates help buyers plan with confidence.",
+  },
+  {
+    title: "Reliable Market Cycles",
+    description: "Consistent supply planning aligned to poultry and egg market demand patterns.",
+  },
+];
+
+export const marketingProperties = [
+  {
+    id: "gv-1",
+    name: "Senthurai Farm Estate",
+    acreage: "8.5 Acres",
+    location: "Pollachi, Tamil Nadu",
+    price: "₹1.85 Cr",
+    status: "Available" as const,
+    enquiries: 14,
+    image: images.villageFarm,
+  },
+  {
+    id: "sr-2",
+    name: "Namakkal Poultry Sheds",
+    acreage: "6.2 Acres",
+    location: "Namakkal, Tamil Nadu",
+    price: "₹1.42 Cr",
+    status: "Available" as const,
+    enquiries: 9,
+    image: images.poultryShed,
+  },
+  {
+    id: "hl-3",
+    name: "Chettinad Grove Holding",
+    acreage: "11.0 Acres",
+    location: "Coimbatore, Tamil Nadu",
+    price: "₹2.35 Cr",
+    status: "Under Offer" as const,
+    enquiries: 21,
+    image: images.chettinad,
+  },
+  {
+    id: "rn-4",
+    name: "Bhavani Riverside Acreage",
+    acreage: "15.4 Acres",
+    location: "Erode, Tamil Nadu",
+    price: "₹2.90 Cr",
+    status: "Available" as const,
+    enquiries: 7,
+    image: images.riverside,
+  },
+  {
+    id: "ow-5",
+    name: "Tiruppur Orchard Farm",
+    acreage: "5.8 Acres",
+    location: "Tiruppur, Tamil Nadu",
+    price: "₹1.18 Cr",
+    status: "Available" as const,
+    enquiries: 11,
+    image: images.orchard,
+  },
+  {
+    id: "ms-6",
+    name: "Salem Tiled Farmhouse",
+    acreage: "9.3 Acres",
+    location: "Salem, Tamil Nadu",
+    price: "₹1.76 Cr",
+    status: "Reserved" as const,
+    enquiries: 16,
+    image: images.farmhouse,
+  },
+];
+
+export const productListings = [
+  {
+    id: "p-eggs",
+    name: "Farm Eggs",
+    available: "12,500",
+    unit: "trays",
+    price: "₹6 / egg",
+    image: images.eggs,
+  },
+  {
+    id: "p-broiler",
+    name: "Broiler Birds",
+    available: "4,200",
+    unit: "birds",
+    price: "₹145 / bird",
+    image: images.poultry,
+  },
+  {
+    id: "p-meat",
+    name: "Fresh Poultry Meat",
+    available: "1,250 kg",
+    unit: "kg",
+    price: "₹280 / kg",
+    image: images.meat,
+  },
+  {
+    id: "p-live",
+    name: "Live Birds",
+    available: "850",
+    unit: "birds",
+    price: "₹160 / bird",
+    image: images.birds,
+  },
+];
+
+export type CampaignStatus = "Active" | "Scheduled" | "Draft" | "Completed";
+
+export const campaigns = [
+  {
+    id: "c1",
+    name: "Pollachi Farm Week",
+    audience: "Property Investors",
+    product: "Farm Properties",
+    status: "Active" as CampaignStatus,
+    reach: "18,400",
+    enquiries: 42,
+  },
+  {
+    id: "c2",
+    name: "Bulk Egg Partners",
+    audience: "Distributors",
+    product: "Farm Eggs",
+    status: "Active" as CampaignStatus,
+    reach: "9,250",
+    enquiries: 27,
+  },
+  {
+    id: "c3",
+    name: "Namakkal Poultry Push",
+    audience: "Farm Operators",
+    product: "Live Birds",
+    status: "Scheduled" as CampaignStatus,
+    reach: "6,100",
+    enquiries: 0,
+  },
+  {
+    id: "c4",
+    name: "Coimbatore Meat Supply",
+    audience: "Retail Buyers",
+    product: "Poultry Meat",
+    status: "Draft" as CampaignStatus,
+    reach: "—",
+    enquiries: 0,
+  },
+  {
+    id: "c5",
+    name: "Q2 Land Showcase",
+    audience: "HNIs & Brokers",
+    product: "Farm Properties",
+    status: "Completed" as CampaignStatus,
+    reach: "22,800",
+    enquiries: 61,
+  },
+];
+
+export type EnquiryStatus = "New" | "Contacted" | "Qualified" | "Closed";
+
+export const enquiries = [
+  {
+    id: "e1",
+    customer: "Arun Kumar",
+    interest: "Farm Property",
+    location: "Coimbatore",
+    date: "Today",
+    status: "New" as EnquiryStatus,
+  },
+  {
+    id: "e2",
+    customer: "Priya Farms",
+    interest: "Bulk Eggs",
+    location: "Chennai",
+    date: "Yesterday",
+    status: "Contacted" as EnquiryStatus,
+  },
+  {
+    id: "e3",
+    customer: "Suresh Traders",
+    interest: "Poultry Meat",
+    location: "Erode",
+    date: "2 days ago",
+    status: "Qualified" as EnquiryStatus,
+  },
+  {
+    id: "e4",
+    customer: "Meena Agri Holdings",
+    interest: "Farm Property",
+    location: "Pollachi",
+    date: "3 days ago",
+    status: "New" as EnquiryStatus,
+  },
+  {
+    id: "e5",
+    customer: "Karthik Distributors",
+    interest: "Live Birds",
+    location: "Namakkal",
+    date: "4 days ago",
+    status: "Contacted" as EnquiryStatus,
+  },
+  {
+    id: "e6",
+    customer: "Lakshmi Cold Chain",
+    interest: "Poultry Meat",
+    location: "Tiruppur",
+    date: "5 days ago",
+    status: "Closed" as EnquiryStatus,
+  },
+  {
+    id: "e7",
+    customer: "Vignesh Estates",
+    interest: "Farm Property",
+    location: "Salem",
+    date: "1 week ago",
+    status: "Qualified" as EnquiryStatus,
+  },
+];
+
+export type StockStatus = "In Stock" | "Low Stock" | "Out of Stock";
+export type InventoryCategory = "Eggs" | "Poultry" | "Meat" | "Live Birds";
+
+export const inventoryItems = [
+  {
+    id: "inv-1",
+    product: "Farm Fresh Eggs",
+    category: "Eggs" as InventoryCategory,
+    farm: "Senthurai Farm Estate",
+    available: 8400,
+    reserved: 1200,
+    unit: "Trays",
+    status: "In Stock" as StockStatus,
+    lastUpdated: "10 min ago",
+    todayMovement: 2400,
+  },
+  {
+    id: "inv-2",
+    product: "Broiler Birds",
+    category: "Poultry" as InventoryCategory,
+    farm: "Namakkal Poultry Sheds",
+    available: 2850,
+    reserved: 450,
+    unit: "Birds",
+    status: "In Stock" as StockStatus,
+    lastUpdated: "25 min ago",
+    todayMovement: 380,
+  },
+  {
+    id: "inv-3",
+    product: "Fresh Poultry Meat",
+    category: "Meat" as InventoryCategory,
+    farm: "Senthurai Farm Estate",
+    available: 780,
+    reserved: 120,
+    unit: "Kg",
+    status: "Low Stock" as StockStatus,
+    lastUpdated: "1 hr ago",
+    todayMovement: 210,
+  },
+  {
+    id: "inv-4",
+    product: "Live Birds",
+    category: "Live Birds" as InventoryCategory,
+    farm: "Namakkal Poultry Sheds",
+    available: 620,
+    reserved: 80,
+    unit: "Birds",
+    status: "In Stock" as StockStatus,
+    lastUpdated: "35 min ago",
+    todayMovement: 95,
+  },
+  {
+    id: "inv-5",
+    product: "Country Eggs",
+    category: "Eggs" as InventoryCategory,
+    farm: "Chettinad Grove Holding",
+    available: 3200,
+    reserved: 400,
+    unit: "Trays",
+    status: "In Stock" as StockStatus,
+    lastUpdated: "45 min ago",
+    todayMovement: 650,
+  },
+  {
+    id: "inv-6",
+    product: "Layer Pullets",
+    category: "Poultry" as InventoryCategory,
+    farm: "Tiruppur Orchard Farm",
+    available: 1100,
+    reserved: 200,
+    unit: "Birds",
+    status: "In Stock" as StockStatus,
+    lastUpdated: "2 hr ago",
+    todayMovement: 140,
+  },
+  {
+    id: "inv-7",
+    product: "Boneless Chicken",
+    category: "Meat" as InventoryCategory,
+    farm: "Bhavani Riverside Acreage",
+    available: 320,
+    reserved: 60,
+    unit: "Kg",
+    status: "Low Stock" as StockStatus,
+    lastUpdated: "90 min ago",
+    todayMovement: 85,
+  },
+  {
+    id: "inv-8",
+    product: "Desi Birds",
+    category: "Live Birds" as InventoryCategory,
+    farm: "Salem Tiled Farmhouse",
+    available: 240,
+    reserved: 40,
+    unit: "Birds",
+    status: "Low Stock" as StockStatus,
+    lastUpdated: "3 hr ago",
+    todayMovement: 30,
+  },
+];
+
+export const inventoryKpis = [
+  { label: "Total Stock", value: "17,510" },
+  { label: "Eggs", value: "11,600 trays" },
+  { label: "Live Birds", value: "860" },
+  { label: "Meat", value: "1,100 kg" },
+  { label: "Low Stock Items", value: "3" },
+];
+
+export const farms = [
+  "Senthurai Farm Estate",
+  "Namakkal Poultry Sheds",
+  "Chettinad Grove Holding",
+  "Bhavani Riverside Acreage",
+  "Tiruppur Orchard Farm",
+  "Salem Tiled Farmhouse",
+];
+
+export const inventoryTypes = [
+  {
+    id: "poultry",
+    eyebrow: "Protein Supply",
+    title: "Poultry",
+    description: "Poultry farming — eggs, meat, and live birds.",
+    highlight: "Reliable yields with quick market cycles",
+    image: "/images/type-poultry.jpg?v=3",
+  },
+  {
+    id: "livestock",
+    eyebrow: "Farm Assets",
+    title: "Livestock",
+    description: "Livestock farming — goats and related farm animals.",
+    highlight: "Resilient category with diversified demand",
+    image: "/images/type-livestock.jpg?v=3",
+  },
+  {
+    id: "agriculture",
+    eyebrow: "Fresh Produce",
+    title: "Agriculture",
+    description: "Agricultural products — vegetables and field crops.",
+    highlight: "Farm-to-market freshness with trust",
+    image: "/images/type-agriculture.jpg?v=3",
+  },
+  {
+    id: "food-processing",
+    eyebrow: "Value Added",
+    title: "Food Processing",
+    description: "Traditional cooking products — idli, dosa, and kitchen staples.",
+    highlight: "Better margins through refinement",
+    image: "/images/type-food-processing.jpg?v=3",
+  },
+  {
+    id: "beverages",
+    eyebrow: "Coconut Based",
+    title: "Beverages",
+    description: "Beverage products — tender coconut and related items.",
+    highlight: "High-repeat purchase category",
+    image: "/images/type-beverages.jpg?v=3",
+  },
+  {
+    id: "textiles",
+    eyebrow: "Apparel Line",
+    title: "Textiles",
+    description: "Clothing and apparel — everyday cotton wear.",
+    highlight: "Everyday essentials with steady demand",
+    image: "/images/type-textiles.jpg?v=3",
+  },
+  {
+    id: "food-oils",
+    eyebrow: "Kitchen Staples",
+    title: "Food Oils",
+    description: "Edible oils — groundnut, sesame, and mill products.",
+    highlight: "Core household category",
+    image: "/images/type-oils.jpg?v=3",
+  },
+  {
+    id: "groceries",
+    eyebrow: "Daily Needs",
+    title: "Groceries",
+    description: "General grocery and food items from local supply.",
+    highlight: "Trusted essentials under one roof",
+    image: "/images/type-groceries.jpg?v=3",
+  },
+];
